@@ -35,12 +35,10 @@ const App = () => {
       <div className="overflow-x-hidden antialiased text-neutral-200 selection:bg-neutral-200 selection:text-neutral-800">
         <div className="fixed top-0 -z-10 h-full w-full">
           <div
-            className={`absolute inset-0 -z-9 h-full w-full items-center px-5 py-24 bg-[url('https://images6.alphacoders.com/856/856983.jpg')] bg-cover bg-center`}
+            className={`absolute inset-0 -z-9 h-full w-full items-center px-5 py-24 bg-[url('https://images6.alphacoders.com/856/856983.jpg')] bg-cover`}
           ></div>
         </div>
         <div className="container mx-auto px-5 py-20 h-screen">
-          <District district={resourceData[0]} />
-
           {loggedIn ? (
             <div className="pb-20">
               {resource ? (
@@ -65,7 +63,7 @@ const App = () => {
                   <District resource={resource.properties} />
                 </div>
               ) : (
-                <div className="flex flex-col gap-6 items-center justify-center">
+                <div className="flex flex-col gap-8 items-center justify-center pt-6">
                   {resourceData.map((resource, index) => (
                     <div
                       onClick={() => setResource(resource)}
@@ -82,7 +80,7 @@ const App = () => {
             <>
               <div className="flex w-full h-full items-center justify-center">
                 <div
-                  className="py-4 px-8 rounded-2xl bg-[#653504] hover:scale-105 transition-all ease-in-out duration-300 cursor-pointer shadow-lg shadow-[#80471c] flex flex-row gap-4 items-center justify-center"
+                  className="py-4 px-8 rounded-2xl bg-[#653504] hover:scale-105 transition-all ease-in-out duration-300 cursor-pointer shadow-lg shadow-[#da9046] flex flex-row gap-4 items-center justify-center"
                   onClick={() => setLoggedIn(true)}
                 >
                   <h1 className="text-4xl font-bold text-center">
