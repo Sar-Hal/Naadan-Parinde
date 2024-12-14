@@ -3,8 +3,8 @@ import fetch from "cross-fetch";
 import { IoArrowBack } from "react-icons/io5";
 import { FaArrowRight } from "react-icons/fa";
 
-import District from "./components/district";
-import DistrictList from "./components/districtList";
+import District from "./components/District";
+import DistrictList from "./components/DistrictList";
 // import resourceData from "./constants/resourceData.json";
 
 const App = () => {

@@ -1,3 +1,5 @@
+import React from "react";
+
 const District = ({ district }) => {
   return (
     <div className="w-full p-10 bg-[#653504] flex flex-col gap-10 items-center justify-center rounded-2xl border-3 border-[#da9046] shadow-lg shadow-[#80471c]">
