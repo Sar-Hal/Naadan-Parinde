@@ -39,6 +39,8 @@ const App = () => {
           ></div>
         </div>
         <div className="container mx-auto px-5 py-20 h-screen">
+          <District district={resourceData[0]} />
+
           {loggedIn ? (
             <div className="pb-20">
               {resource ? (
