@@ -12,14 +12,26 @@ const App = () => {
   const [resource, setResource] = useState(undefined);
 
   const [resourceData, setResourceData] = useState([]);
+  const [survivors, setSurvivors] = useState([]);
 
   const fetchData = async () => {
-    const result = await fetch("https://api.mlsakiit.com/resources", {
+    const resourceResult = await fetch("https://api.mlsakiit.com/resources", {
       method: "GET",
     }).catch((err) => console.error(err));
-    const data = await result.json().catch((err) => console.error(err));
-    console.log(data);
-    setResourceData(data.features);
+    const resData = await resourceResult
+      .json()
+      .catch((err) => console.error(err));
+    console.log(resData);
+    setResourceData(resData.features);
+
+    const survivorsResult = await fetch("https://api.mlsakiit.com/survivors", {
+      method: "GET",
+    }).catch((err) => console.error(err));
+    const surData = await survivorsResult
+      .json()
+      .catch((err) => console.error(err));
+    console.log(surData);
+    setSurvivors(surData);
   };
   fetchData();
 
@@ -53,7 +65,7 @@ const App = () => {
 
               {resource ? (
                 <div className="w-full flex flex-col gap-10 items-start justify-center">
-                  <District district={resource.properties} />
+                  <District district={resource.properties} survivors={survivors} />
                 </div>
               ) : (
                 <div className="flex flex-col gap-8 items-center justify-center pt-6">
