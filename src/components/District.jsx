@@ -1,6 +1,3 @@
-import { useState } from "react";
-import fetch from "cross-fetch";
-
 const District = ({ district, survivors }) => {
   // const [survivors, setSurvivors] = useState([]);
 
