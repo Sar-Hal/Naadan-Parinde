@@ -14,7 +14,7 @@ const District = ({ district, survivors }) => {
   return (
     <div className="w-full p-10 bg-[#653504] flex flex-col gap-10 items-center justify-center rounded-2xl border-3 border-[#da9046] shadow-lg shadow-[#80471c]">
       <div className="flex flex-row gap-12 w-full items-center justify-evenly">
-        <div className="flex flex-col gap-3 items-center justify-center w-full">
+        <div className="flex flex-col gap-3 items-center justify-center w-[25%]">
           <h1 className="text-2xl font-bold">Temperature</h1>
           <div className="flex items-center justify-center w-full rounded-xl bg-[#da9046] p-4 shadow-lg shadow-[#653504] hover:scale-105 transition-all ease-in-out duration-200">
             <h1 className="font-bold text-2xl text-[#4f3317]">
@@ -22,7 +22,7 @@ const District = ({ district, survivors }) => {
             </h1>
           </div>
         </div>
-        <div className="flex flex-col gap-3 items-center justify-center w-full">
+        <div className="flex flex-col gap-3 items-center justify-center w-[25%]">
           <h1 className="text-2xl font-bold">Rainfall</h1>
           <div className="flex items-center justify-center rounded-xl bg-[#da9046] p-4 w-full shadow-lg shadow-[#653504] hover:scale-105 transition-all ease-in-out duration-200">
             <h1 className="font-bold text-2xl text-[#4f3317]">
@@ -30,7 +30,7 @@ const District = ({ district, survivors }) => {
             </h1>
           </div>
         </div>
-        <div className="flex flex-col gap-3 items-center justify-center w-full">
+        <div className="flex flex-col gap-3 items-center justify-center w-[25%]">
           <h1 className="text-2xl font-bold">Wind Speed</h1>
           <div className="flex items-center justify-center rounded-xl bg-[#da9046] p-4 w-full shadow-lg shadow-[#653504] hover:scale-105 transition-all ease-in-out duration-200">
             <h1 className="font-bold text-2xl text-[#4f3317]">
@@ -38,7 +38,7 @@ const District = ({ district, survivors }) => {
             </h1>
           </div>
         </div>
-        <div className="flex flex-col gap-3 items-center justify-center w-full">
+        <div className="flex flex-col gap-3 items-center justify-center w-[25%]">
           <h1 className="text-2xl font-bold">Water</h1>
           <div className="flex items-center justify-center rounded-xl bg-[#da9046] p-4 w-full shadow-lg shadow-[#653504] hover:scale-105 transition-all ease-in-out duration-200">
             <h1 className="font-bold text-2xl text-[#4f3317]">
@@ -48,7 +48,7 @@ const District = ({ district, survivors }) => {
         </div>
       </div>
       <div className="flex flex-row gap-12 w-full items-center justify-evenly">
-        <div className="flex flex-col gap-3 items-center justify-center w-full">
+        <div className="flex flex-col gap-3 items-center justify-center w-[25%]">
           <h1 className="text-2xl font-bold">Food Rations</h1>
           <div className="flex items-center justify-center w-full rounded-xl bg-[#da9046] p-4 shadow-lg shadow-[#653504] hover:scale-105 transition-all ease-in-out duration-200">
             <h1 className="font-bold text-2xl text-[#4f3317]">
@@ -56,7 +56,7 @@ const District = ({ district, survivors }) => {
             </h1>
           </div>
         </div>
-        <div className="flex flex-col gap-3 items-center justify-center w-full">
+        <div className="flex flex-col gap-3 items-center justify-center w-[25%]">
           <h1 className="text-2xl font-bold">MedKits</h1>
           <div className="flex items-center justify-center rounded-xl bg-[#da9046] p-4 w-full shadow-lg shadow-[#653504] hover:scale-105 transition-all ease-in-out duration-200">
             <h1 className="font-bold text-2xl text-[#4f3317]">
@@ -64,7 +64,7 @@ const District = ({ district, survivors }) => {
             </h1>
           </div>
         </div>
-        <div className="flex flex-col gap-3 items-center justify-center w-full">
+        <div className="flex flex-col gap-3 items-center justify-center w-[25%]">
           <h1 className="text-2xl font-bold">Ammo</h1>
           <div className="flex items-center justify-center rounded-xl bg-[#da9046] p-4 w-full shadow-lg shadow-[#653504] hover:scale-105 transition-all ease-in-out duration-200">
             <h1 className="font-bold text-2xl text-[#4f3317]">
@@ -72,7 +72,7 @@ const District = ({ district, survivors }) => {
             </h1>
           </div>
         </div>
-        <div className="flex flex-col gap-3 items-center justify-center w-full">
+        <div className="flex flex-col gap-3 items-center justify-center w-[25%]">
           <h1 className="text-2xl font-bold">Camp Exists</h1>
           <div className="flex items-center justify-center rounded-xl bg-[#da9046] p-4 w-full shadow-lg shadow-[#653504] hover:scale-105 transition-all ease-in-out duration-200">
             <h1 className="font-bold text-2xl text-[#4f3317]">
@@ -88,7 +88,7 @@ const District = ({ district, survivors }) => {
             .filter((survivor) => survivor.district === district.dist_name)
             .map((survivor, index) => (
               <div
-                className="flex flex-col gap-0 hover:gap-1.5 group items-center justify-center rounded-xl bg-[#da9046] p-4 shadow-lg shadow-[#653504] hover:scale-105 transition-all ease-linear duration-200 hover:shadow-lg hover:shadow-[#da9046]"
+                className="flex flex-col gap-0 hover:gap-1.5 group items-center justify-center rounded-xl bg-[#da9046] p-4 shadow-lg shadow-[#653504] hover:scale-105 transition-all ease-linear duration-200 hover:shadow-md hover:shadow-[#da9046]"
                 key={index}
               >
                 <h1 className="font-bold text-2xl text-[#4f3317]">
