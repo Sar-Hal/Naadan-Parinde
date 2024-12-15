@@ -91,12 +91,20 @@ const District = ({ district, survivors }) => {
             .filter((survivor) => survivor.district === district.dist_name)
             .map((survivor, index) => (
               <div
-                className="flex items-center justify-center rounded-xl bg-[#da9046] p-4 shadow-lg shadow-[#653504] hover:scale-105 transition-all ease-in-out duration-200"
+                className="flex flex-col gap-0 hover:gap-1.5 group items-center justify-center rounded-xl bg-[#da9046] p-4 shadow-lg shadow-[#653504] hover:scale-105 transition-all ease-linear duration-200 hover:shadow-lg hover:shadow-[#da9046]"
                 key={index}
               >
                 <h1 className="font-bold text-2xl text-[#4f3317]">
                   {survivor.survivor_id}
                 </h1>
+                <div className="flex-col gap-3 transition-all ease-linear duration-200 w-full items-center justify-center">
+                  <h1 className="text-[0px] group-hover:text-lg font-semibold text-[#4f3317] transition-all ease-linear duration-200">{`Lat: ${survivor.lat.toFixed(
+                    3
+                  )}`}</h1>
+                  <h1 className="text-[0px] group-hover:text-lg font-semibold text-[#4f3317] transition-all ease-linear duration-200">{`Lon: ${survivor.lon.toFixed(
+                    3
+                  )}`}</h1>
+                </div>
               </div>
             ))}
         </div>

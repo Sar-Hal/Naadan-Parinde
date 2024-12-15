@@ -6,6 +6,7 @@ import { FaArrowRight } from "react-icons/fa";
 import District from "./components/District";
 import DistrictList from "./components/DistrictList";
 // import resourceData from "./constants/resourceData.json";
+// import survivors from "./constants/survivorsData.json";
 
 const App = () => {
   const [loggedIn, setLoggedIn] = useState(false);
