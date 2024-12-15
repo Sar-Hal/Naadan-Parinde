@@ -82,7 +82,11 @@ const District = ({ district, survivors }) => {
         </div>
       </div>
       <div className="flex flex-col items-center justify-center gap-4 w-full">
-        <h1 className="text-4xl font-semibold">Survivors</h1>
+        <h1 className="text-4xl font-semibold">{`Survivors: ${
+          survivors.filter(
+            (survivor) => survivor.district === district.dist_name
+          ).length
+        }`}</h1>
         <div className="flex flex-wrap gap-4 w-full items-center justify-evenly">
           {survivors
             .filter((survivor) => survivor.district === district.dist_name)
