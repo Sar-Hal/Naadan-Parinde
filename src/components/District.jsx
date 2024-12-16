@@ -1,16 +1,4 @@
 const District = ({ district, survivors }) => {
-  // const [survivors, setSurvivors] = useState([]);
-
-  // const fetchData = async () => {
-  //   const result = await fetch("https://api.mlsakiit.com/survivors", {
-  //     method: "GET",
-  //   }).catch((err) => console.error(err));
-  //   const data = await result.json().catch((err) => console.error(err));
-  //   console.log(data);
-  //   setSurvivors(data);
-  // };
-  // fetchData();
-
   return (
     <div className="w-full p-10 bg-[#653504] flex flex-col gap-10 items-center justify-center rounded-2xl border-3 border-[#da9046] shadow-lg shadow-[#80471c]">
       <div className="flex flex-row gap-12 w-full items-center justify-evenly">
