@@ -5,36 +5,34 @@ import { FaArrowRight } from "react-icons/fa";
 
 import District from "./components/District";
 import DistrictList from "./components/DistrictList";
-// import resourceData from "./constants/resourceData.json";
-// import survivors from "./constants/survivorsData.json";
+import resourceData from "./constants/resourceData.json";
+import survivors from "./constants/survivorsData.json";
 
 const App = () => {
   const [loggedIn, setLoggedIn] = useState(false);
   const [resource, setResource] = useState(undefined);
 
-  const [resourceData, setResourceData] = useState([]);
-  const [survivors, setSurvivors] = useState([]);
+  // const [resourceData, setResourceData] = useState([]);
+  // const [survivors, setSurvivors] = useState([]);
 
-  const fetchData = async () => {
-    const resourceResult = await fetch("https://api.mlsakiit.com/resources", {
-      method: "GET",
-    }).catch((err) => console.error(err));
-    const resData = await resourceResult
-      .json()
-      .catch((err) => console.error(err));
-    console.log(resData);
-    setResourceData(resData.features);
+  // const fetchData = async () => {
+  //   const resourceResult = await fetch("https://api.mlsakiit.com/resources", {
+  //     method: "GET",
+  //   }).catch((err) => console.error(err));
+  //   const resData = await resourceResult
+  //     .json()
+  //     .catch((err) => console.error(err));
+  //   setResourceData(resData.features);
 
-    const survivorsResult = await fetch("https://api.mlsakiit.com/survivors", {
-      method: "GET",
-    }).catch((err) => console.error(err));
-    const surData = await survivorsResult
-      .json()
-      .catch((err) => console.error(err));
-    console.log(surData);
-    setSurvivors(surData);
-  };
-  fetchData();
+  //   const survivorsResult = await fetch("https://api.mlsakiit.com/survivors", {
+  //     method: "GET",
+  //   }).catch((err) => console.error(err));
+  //   const surData = await survivorsResult
+  //     .json()
+  //     .catch((err) => console.error(err));
+  //   setSurvivors(surData);
+  // };
+  // fetchData();
 
   return (
     <>
@@ -66,7 +64,10 @@ const App = () => {
 
               {resource ? (
                 <div className="w-full flex flex-col gap-10 items-start justify-center">
-                  <District district={resource.properties} survivors={survivors} />
+                  <District
+                    district={resource.properties}
+                    survivors={survivors}
+                  />
                 </div>
               ) : (
                 <div className="flex flex-col gap-8 items-center justify-center pt-6">
