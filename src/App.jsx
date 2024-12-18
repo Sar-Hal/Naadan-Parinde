@@ -42,7 +42,7 @@ const App = () => {
             className={`absolute inset-0 -z-9 h-full w-full items-center px-5 py-24 bg-[url('https://images6.alphacoders.com/856/856983.jpg')] bg-cover`}
           ></div>
         </div>
-        <div className="container mx-auto px-5 py-20 h-screen select-none tracking-wider">
+        {/* <div className="container mx-auto px-5 py-20 h-screen select-none tracking-wider">
           {loggedIn ? (
             <div className="pb-20">
               {resource ? (
@@ -98,7 +98,7 @@ const App = () => {
               </div>
             </>
           )}
-        </div>
+        </div> */}
       </div>
     </>
   );
